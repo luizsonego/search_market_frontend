@@ -126,7 +126,7 @@ function Createmarket() {
               zoom={15}
               onClick={handleMapClick}
             >
-              {position.latitude != 0 && (
+              {position.latitude !== 0 && (
                 <Marker
                   interactive={false}
                   icon={mapIcon}
