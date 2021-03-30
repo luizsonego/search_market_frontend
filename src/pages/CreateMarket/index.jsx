@@ -3,12 +3,10 @@ import Box from "../../components/Box";
 import MenuAside from "../../components/MenuAside";
 import Map from "../../components/Map";
 import { Marker } from "react-leaflet";
-import L from "leaflet";
 
 import "./style.css";
 
 import mapIcon from "../../components/Map/mapIcon";
-import mapMarkerImg from "../../assets/images/map-marker.svg";
 import { useHistory } from "react-router-dom";
 
 import api from "../../services/api";
