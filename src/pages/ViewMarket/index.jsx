@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import L from "leaflet";
-import { Marker, TileLayer } from "react-leaflet";
+import { Marker } from "react-leaflet";
 import Map from "../../components/Map";
 import Gallery from "../../components/Gallery";
 import MenuAside from "../../components/MenuAside";
