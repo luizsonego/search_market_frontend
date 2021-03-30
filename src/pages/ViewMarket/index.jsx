@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import L from "leaflet";
 import { Marker } from "react-leaflet";
 import Map from "../../components/Map";
-import Gallery from "../../components/Gallery";
 import MenuAside from "../../components/MenuAside";
 
 import api from "../../services/api.js";

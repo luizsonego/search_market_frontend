@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.svg";
+import { FiArrowLeft } from "react-icons/fi";
 import "./style.css";
 
 export default function MenuAside({ width = "large" }) {
