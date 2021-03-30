@@ -1,0 +1,50 @@
+.market-details {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+}
+
+
+.opening-hours {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.opening-hours .hours{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-left: 10px;
+  margin-top: 25px;
+  margin-right: 10px;
+
+  font-family: Nunito;
+  font-size: 18px;
+
+  color: var(--color-primary);
+}
+
+.map-content {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  border-radius: 10px;
+}
+
+.map-content footer {
+  text-align: right;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.map-content footer a{
+  font-size: 22px;
+  font-family: Nunito;
+  font-weight: 800;
+  
+  text-decoration: none;
+  color: var(--color-primary);
+}

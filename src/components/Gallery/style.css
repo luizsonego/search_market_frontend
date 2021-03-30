@@ -1,0 +1,45 @@
+.gallery .main-image {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 240px;
+  background: #ccc;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+
+  overflow: hidden;
+}
+.gallery .main-image img {
+  width: 100%;
+}
+
+.gallery .images-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.gallery .images-list .small-images {
+  background: #ccc;
+  width: 70px;
+  height: 70px;
+
+  margin-top: 10px;
+  margin-left: 20px;
+
+  border-radius:10px;
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  -ms-border-radius:10px;
+  -o-border-radius:10px;
+
+  overflow: hidden;
+}
+
+.gallery .images-list .small-images img {
+  width: auto;
+  height: 100%;
+}

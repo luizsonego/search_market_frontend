@@ -1,0 +1,126 @@
+.page-landing {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--color-gradiente-primary);
+  color: var(--color-text-in-primary);
+}
+
+.content-wrapper {
+  position: relative;
+
+  width: 100%;
+  max-width: 1100px;
+  height: 100%;
+  max-height: 680px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: url("../../assets/images/landing-image.svg") no-repeat 90% center;
+  background-size: 50%;
+}
+
+.content-wrapper main {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-wrapper h1 {
+  max-width: 350px;
+  margin-top: 40px;
+  font-size: 70px;
+  text-align: center;
+  font-family: Nunito;
+  font-weight: 800;
+}
+
+.content-wrapper h2 {
+  max-width: 350px;
+  margin-top: 0px;
+  font-size: 40px;
+  text-align: center;
+  font-family: Nunito;
+  font-weight: 600;
+}
+
+.content-wrapper .location {
+  position: absolute;
+  right: 0;
+  top:15px;
+
+  font-size: 20px;
+  line-height: 25px;
+
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  font-family: Nunito;
+}
+
+.content-wrapper .actions-landing {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 40px;
+  font-family: Nunito;
+}
+
+.content-wrapper .actions-landing .enter-app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: var(--color-primary);
+  color: var(--color-button-text);
+  box-shadow: -4px 4px 4px -2px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  -ms-transition: background-color 0.2s;
+  -o-transition: background-color 0.2s;
+  margin-right: 20px;
+}
+
+.content-wrapper .actions-landing .enter-app:hover {
+  background: var(--color-primary-darker);
+}
+
+.content-wrapper .actions-landing .create {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: var(--color-button-text);
+  border: solid 2px var(--color-button-text);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: color .5s, border .5s,;
+  -webkit-transition: color .5s, border .5s,;
+  -moz-transition: color .5s, border .5s,;
+  -ms-transition: color .5s, border .5s,;
+  -o-transition: color .5s, border .5s,;
+}
+
+.content-wrapper .actions-landing .create:hover {
+  border: solid 2px var(--color-primary-darker);
+  color: var(--color-primary-darker);
+}
