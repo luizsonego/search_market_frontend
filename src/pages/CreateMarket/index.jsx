@@ -5,7 +5,6 @@ import Map from "../../components/Map";
 import { Marker } from "react-leaflet";
 import L from "leaflet";
 
-import { FiPlus } from "react-icons/fi";
 import "./style.css";
 
 import mapIcon from "../../components/Map/mapIcon";
@@ -18,8 +17,6 @@ function Createmarket() {
   const [position, setPosition] = useState({ latitude: 0, longitude: 0 });
   const [name, setName] = useState();
   const [about, setAbout] = useState();
-  const [lat, setLat] = useState();
-  const [lng, setLng] = useState();
 
   const [sunday, setSunday] = useState(false);
   const [monday, setMonday] = useState(false);
@@ -44,14 +41,6 @@ function Createmarket() {
   const [satEnd, setSatEnd] = useState('');
 
   const history = useHistory();
-
-  const happyMapIcon = L.icon({
-    iconUrl: mapMarkerImg,
-
-    iconSize: [58, 68],
-    iconAnchor: [29, 68],
-    popupAnchor: [0, -75],
-  });
 
   const handleMapClick = (event) => {
     const { lat, lng } = event.latlng;
@@ -107,7 +96,7 @@ function Createmarket() {
         longitude: position.coords.longitude,
       });
     });
-  }, [setLng, setLat]);
+  }, []);
 
   return (
     <div className="create-market">
@@ -135,7 +124,6 @@ function Createmarket() {
 
             <Map
               center={[position.latitude, position.longitude]}
-              // center={[lat, lng]}
               style={{ width: "100%", height: 280 }}
               zoom={15}
               onClick={handleMapClick}
@@ -202,7 +190,6 @@ function Createmarket() {
 
             </div>
 
-            {/* <input type="button" value="Salvar" className="confirm-button"/> */}
             <button className="confirm-button" type="submit">
               Salvar
             </button>

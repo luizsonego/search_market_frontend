@@ -15,7 +15,6 @@ import { useParams } from "react-router-dom";
 function ViewMarket() {
   const params = useParams();
   const [market, setMarket] = useState();
-  const [selected, setSelected] = useState(0);
 
   const mapIcon = L.icon({
     iconUrl: mapMarkerImg,
@@ -113,7 +112,6 @@ function ViewMarket() {
           <footer>
             <a
               href={`https://www.google.com/maps/dir/?api=1&destination=${market.latitude},${market.longitude}`}
-              target="_blank"
             >
               Como chegar
             </a>
