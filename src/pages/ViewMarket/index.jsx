@@ -40,87 +40,90 @@ function ViewMarket() {
 
   return (
     <div className="market-details">
-      <MenuAside width="small" />
+      <MenuAside width="small" title={market.name}/>
 
-      <Box title={market.name}>
+      <div className="container">
 
-        <div className="opening-hours">
-          {market.sunday === "1" ? (
-            <div className="hours">
-              <strong>Domingo</strong>
-              <span>{market.sunStart} até {market.sunEnd}</span>
-            </div>
-          ) : ''}
+        <Box title={market.name}>
 
-          {market.monday === "1" ? (
-            <div className="hours">
-              <strong>Segunda-feira</strong>
-              <span>{market.monStart} até {market.monEnd}</span>
-            </div>
-          ) : ''}
+          <div className="opening-hours">
+            {market.sunday === "1" ? (
+              <div className="hours">
+                <strong>Domingo</strong>
+                <span>{market.sunStart} até {market.sunEnd}</span>
+              </div>
+            ) : ''}
 
-          {market.tuesday === "1" ? (
-            <div className="hours">
-              <strong>Terça-feira</strong>
-              <span>{market.tueStart} até {market.tueEnd}</span>
-            </div>
-          ) : ''}
+            {market.monday === "1" ? (
+              <div className="hours">
+                <strong>Segunda-feira</strong>
+                <span>{market.monStart} até {market.monEnd}</span>
+              </div>
+            ) : ''}
 
-          {market.wednesday === "1" ? (
-            <div className="hours">
-              <strong>Quarta-feira</strong>
-              <span>{market.wedStart} até {market.wedEnd}</span>
-            </div>
-          ) : ''}
+            {market.tuesday === "1" ? (
+              <div className="hours">
+                <strong>Terça-feira</strong>
+                <span>{market.tueStart} até {market.tueEnd}</span>
+              </div>
+            ) : ''}
 
-          {market.thursday === "1" ? (
-            <div className="hours">
-              <strong>Quint-feira</strong>
-              <span>{market.thuStart} até {market.thuEnd}</span>
-            </div>
-          ) : ''}
+            {market.wednesday === "1" ? (
+              <div className="hours">
+                <strong>Quarta-feira</strong>
+                <span>{market.wedStart} até {market.wedEnd}</span>
+              </div>
+            ) : ''}
 
-          {market.friday === "1" ? (
-            <div className="hours">
-              <strong>Sexta-feira</strong>
-              <span>{market.friStart} até {market.friEnd}</span>
-            </div>
-          ) : ''}
+            {market.thursday === "1" ? (
+              <div className="hours">
+                <strong>Quint-feira</strong>
+                <span>{market.thuStart} até {market.thuEnd}</span>
+              </div>
+            ) : ''}
 
-          {market.saturday === "1" ? (
-            <div className="hours">
-              <strong>Sábado</strong>
-              <span>{market.satStart} até {market.satEnd}</span>
-            </div>
-          ) : ''}
-        </div>
+            {market.friday === "1" ? (
+              <div className="hours">
+                <strong>Sexta-feira</strong>
+                <span>{market.friStart} até {market.friEnd}</span>
+              </div>
+            ) : ''}
 
-        <div className="map-content">
-          <Map
-            interactive={false}
-            center={[market.latitude, market.longitude]}
-            zoom={16}
-            style={{ width: "100%", height: 280 }}
-          >
-            <Marker
+            {market.saturday === "1" ? (
+              <div className="hours">
+                <strong>Sábado</strong>
+                <span>{market.satStart} até {market.satEnd}</span>
+              </div>
+            ) : ''}
+          </div>
+
+          <div className="map-content">
+            <Map
               interactive={false}
-              icon={mapIcon}
-              position={[market.latitude, market.longitude]}
-            />
-          </Map>
-
-          <footer>
-            <a
-              href={`https://www.google.com/maps/dir/?api=1&destination=${market.latitude},${market.longitude}`}
+              center={[market.latitude, market.longitude]}
+              zoom={16}
+              style={{ width: "100%", height: 280 }}
             >
-              Como chegar
-            </a>
-          </footer>
+              <Marker
+                interactive={false}
+                icon={mapIcon}
+                position={[market.latitude, market.longitude]}
+              />
+            </Map>
 
-          <h2>Sobre a feira</h2>
-          <p>{market.about}</p>
-        </div>
-      </Box>
+            <footer>
+              <a
+                href={`https://www.google.com/maps/dir/?api=1&destination=${market.latitude},${market.longitude}`}
+              >
+                Como chegar
+            </a>
+            </footer>
+
+            <h2>Sobre a feira</h2>
+            <p>{market.about}</p>
+          </div>
+        </Box>
+      </div>
     </div>
   );
 }

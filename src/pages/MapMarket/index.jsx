@@ -50,33 +50,33 @@ function MapMarket() {
   return (
     <div className="page-map">
       <MenuAside />
-      <Map center={[mapPosition.latitude, mapPosition.longitude]}>
-        {market?.map((feira) => {
-          return (
-            <Marker
-              key={feira.id}
-              icon={happyMapIcon}
-              position={[feira.latitude, feira.longitude]}
-            >
-              <Popup
-                closeButton={false}
-                minWidth={240}
-                maxWidth={240}
-                className="map-popup"
+        <Map center={[mapPosition.latitude, mapPosition.longitude]}>
+          {market?.map((feira) => {
+            return (
+              <Marker
+                key={feira.id}
+                icon={happyMapIcon}
+                position={[feira.latitude, feira.longitude]}
               >
-                {feira.name}
-                <Link to={`/view/${feira.id}`}>
-                  <FiArrowRight size={20} color="#fff" />
-                </Link>
-              </Popup>
-            </Marker>
-          );
-        })}
-      </Map>
+                <Popup
+                  closeButton={false}
+                  minWidth={240}
+                  maxWidth={240}
+                  className="map-popup"
+                >
+                  {feira.name}
+                  <Link to={`/view/${feira.id}`}>
+                    <FiArrowRight size={20} color="#fff" />
+                  </Link>
+                </Popup>
+              </Marker>
+            );
+          })}
+        </Map>
 
-      <Link to="/create" className="create-feira">
-        <FiPlus size={32} color="#FFF" />
-      </Link>
+        <Link to="/create" className="create-feira">
+          <FiPlus size={32} color="#FFF" />
+        </Link>
     </div>
   );
 }

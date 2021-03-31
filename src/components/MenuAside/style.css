@@ -1,19 +1,19 @@
 aside {
-  
   background: var(--color-gradiente-primary);
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 aside.large {
-  width: 400px;
+  width: 350px;
   padding: 80px;
 }
 aside.small {
   width: 80px;
   padding: 10px;
+  position: fixed;
+  height: inherit;
 }
 
 aside header {
@@ -61,4 +61,36 @@ aside footer .button-back {
   cursor: pointer;
 
   transition: background-color 0.2s;
+}
+
+@media (max-width: 700px) {
+  aside.large {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+  }
+
+  aside.small {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+  }
+
+  aside {
+    background: var(--color-box-base);
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  aside img {
+    display: none;
+  }
+  aside p {
+    color: var(--color-primary);
+    line-height: 20px;
+    margin-top: 5px;
+  }
 }

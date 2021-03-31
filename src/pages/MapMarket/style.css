@@ -1,17 +1,15 @@
 .page-map {
   width: 100vw;
   height: 100vh;
-
   position: relative;
   display: flex;
 }
 
-.page-map .map-popup .leaflet-popup-content{
+.page-map .map-popup .leaflet-popup-content {
   color: var(--color-primary);
   font-size: 20px;
   font-weight: 700;
   margin: 8px 12px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,39 +19,41 @@
   width: 40px;
   height: 40px;
   background: var(--color-gradiente-primary);
-  /* box-shadow: 17.2868px 27.6589px 41.4884px rgba(23, 142, 166, 0.16); */
   border-radius: 12px;
-
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* .page-map .map-popup .leaflet-popup-tip-container {
-  top: 50%;
-  left: 0;
-} */
-
 .page-map a.create-feira {
   position: absolute;
-
   border: 0;
-
   right: 40px;
   bottom: 40px;
-
   width: 64px;
   height: 64px;
   background: var(--color-gradiente-primary);
   border-radius: 20px;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   z-index: 999;
-
   cursor: pointer;
-
   transition: background-color 0.2s;
+}
+
+@media (max-width: 700px) {
+  .page-map {
+    display: block;
+  }
+
+  /* .page-map .map-popup .leaflet-popup-content {
+    min-width: 400px;
+    position: absolute;
+    z-index: 9999;
+    height: 250px;
+    background: var(--color-background);
+    left: 50%;
+    transform: translateX(-50%);
+  } */
 }

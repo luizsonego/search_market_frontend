@@ -3,13 +3,13 @@ import logo from "../../assets/images/logo.svg";
 import { FiArrowLeft } from "react-icons/fi";
 import "./style.css";
 
-export default function MenuAside({ width = "large" }) {
+export default function MenuAside({ width = "large", title }) {
   return (
     <aside className={width === "large" ? "large" : "small"}>
       <header>
         <img src={logo} alt="Logo Feira" />
 
-        {width === "large" ? <p>Escolha uma feira</p> : ""}
+        {width === "large" ? <p>Escolha uma feira</p> : <p>{title}</p>}
       </header>
 
       <footer>

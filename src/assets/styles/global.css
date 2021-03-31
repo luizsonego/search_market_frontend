@@ -55,10 +55,16 @@ textarea {
 .container {
   width: 90vw;
   max-width: 700px;
+  margin: 0 auto;
 }
 
-@media (min-width: 700px) {
+
+@media (max-width: 700px) {
   :root {
     font-size: 62,5%;
+  }
+  .container {
+    width: 90vw;
+    margin: 80px auto;
   }
 }
